@@ -1,8 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import Spinner from '@/components/spinner'
 
+const LazyModel = dynamic(() => import('../model'), {
+  ssr: false,
+  loading: () => <Spinner />,
+})
 interface Props {
   children: React.ReactNode
 }
@@ -28,7 +34,12 @@ const MainLayout = ({ children }: Props) => {
       </Head>
       <Header />
       <main className="pt-16 grow bg-background ">
-        <div className="max-w-5xl mx-auto px-4">{children}</div>
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex flex-row justify-center items-center mx-auto w-[280px] h-[280px]">
+            <LazyModel />
+          </div>
+          {children}
+        </div>
       </main>
       <Footer />
     </>
