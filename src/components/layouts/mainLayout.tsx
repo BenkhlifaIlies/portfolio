@@ -33,8 +33,8 @@ const MainLayout = ({ children }: Props) => {
         <title>BenkhelifaIlyes - Homepage</title>
       </Head>
       <Header />
-      <main className="pt-16 grow bg-background ">
-        <div className="max-w-5xl mx-auto px-4">
+      <main className="pt-16 grow bg-background text-text">
+        <div className="max-w-3xl mx-auto px-8">
           <div className="flex flex-row justify-center items-center mx-auto w-[280px] h-[280px]">
             <LazyModel />
           </div>
