@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { terminalData as data } from '@/constants/data'
+import { ArrowIcon } from './icons'
 
 const Line = ({ input, output }: { input: string; output: string }) => {
   const [currentInputText, setCurrentInputText] = useState('')
@@ -31,16 +32,7 @@ const Line = ({ input, output }: { input: string; output: string }) => {
   return (
     <>
       <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 256 256"
-          className="inline-block align-middle mr-2"
-        >
-          <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
-        </svg>
+        <ArrowIcon />
         <span className="font-semibold text-lg">{currentInputText}</span>
       </div>
       {outputVizibility ? (
