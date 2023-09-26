@@ -1,17 +1,14 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import Layout from '../components/layouts/mainLayout'
+import ProjectList from '@/components/projectList'
 import Terminal from '@/components/teminal'
+import SocialLinks from '@/components/socialLinks'
+import { ContactIcon, ThreeDotsIcon } from '@/components/icons'
+
 import { ProjectsData } from '@/constants/data'
-import Card from '@/components/card'
-import {
-  BlogLogo,
-  ContactIcon,
-  GithubIcon,
-  LinkedInIcon,
-  ThreeDotsIcon,
-  TwitterIcon,
-} from '@/components/icons'
+import Button from '@/components/button'
+
+const PROJECTSTOSHOW = 4
 
 export default function Home() {
   return (
@@ -46,15 +43,11 @@ export default function Home() {
           write blogs about that.
           <br />
         </p>
-        <div className="my-6 flex justify-center ">
-          <Link
-            href="mailto:theiliesbenkhlifa@gmail.com"
-            className="capitalize font-semibold py-2 px-4 rounded-lg bg-primary cursor-pointer hover:bg-primary/70 flex items-center"
-          >
-            <span className="capitalize px-2">contact me</span>
-            <ContactIcon />
-          </Link>
-        </div>
+        <Button
+          label="contact me"
+          link="mailto:theiliesbenkhlifa@gmail.com"
+          icon={<ContactIcon />}
+        />
       </div>
 
       <div className="mb-12">
@@ -65,58 +58,14 @@ export default function Home() {
           Here are a few of my favorite projects:
         </p>
         <div className="mt-6">
-          {ProjectsData.map((project) => {
-            return <Card key={project.title} {...project} />
-          })}
+          <ProjectList list={ProjectsData.slice(0, PROJECTSTOSHOW)} />
         </div>
-        <div className="my-6 flex justify-center ">
-          <Link
-            href="/projects"
-            className="capitalize font-semibold py-2 px-4 rounded-lg bg-primary cursor-pointer hover:bg-primary/70 flex items-center"
-          >
-            <span className="capitalize px-2">see more</span>
-
-            <ThreeDotsIcon />
-          </Link>
-        </div>
+        <Button label="see more" link="/projects" icon={<ThreeDotsIcon />} />
       </div>
 
       <Terminal />
 
-      <div className="mb-12">
-        <h3 className="capitalize font-bold text-lg underline underline-offset-8 decoration-neutral-600 decoration-4 my-4 mb-6">
-          find me on the web
-        </h3>
-        <ul className="pl-4 font-semibold">
-          <li className="my-2 hover:text-accent w-fit">
-            <Link href="#" target="_blank">
-              <span className="capitalize pr-2">my blog</span>
-              <BlogLogo />
-            </Link>
-          </li>
-          <li className="my-2 hover:text-accent w-fit">
-            <Link href="https://github.com/BenkhlifaIlies" target="_blank">
-              <span className="capitalize pr-2">GitHub</span>
-              <GithubIcon />
-            </Link>
-          </li>
-          <li className="my-2 hover:text-accent w-fit">
-            <Link
-              href="https://www.linkedin.com/in/ilyesbenkhelifa/"
-              target="_blank"
-            >
-              <span className="capitalize pr-2">LinkedIn</span>
-              <LinkedInIcon />
-            </Link>
-          </li>
-          <li className="my-2 hover:text-accent w-fit">
-            <Link href="https://twitter.com/IlyesBenkhlifa" target="_blank">
-              <span className="capitalize pr-2">twitter</span>
-              <TwitterIcon />
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <SocialLinks />
     </Layout>
   )
 }
