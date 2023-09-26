@@ -66,7 +66,7 @@ const Terminal = () => {
 
   return (
     <div className="hidden lg:flex flex-col w-full mb-12">
-      <div className="flex items-center justify-start w-full h-9 rounded-t-2xl bg-neutral-300 dark:bg-transparent/90">
+      <div className="flex items-center justify-start w-full h-9 rounded-t-2xl bg-neutral-300 dark:bg-slate-700">
         <div className="absolute flex flex-row ml-6">
           <div className="p-2 mr-2 rounded-full bg-red-400"></div>
           <div className="p-2 mr-2 rounded-full bg-orange-400"></div>
@@ -77,7 +77,7 @@ const Terminal = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-start w-full min-h-[24rem] p-8 rounded-b-2xl bg-neutral-100 dark:bg-transparent/90">
+      <div className="flex flex-col justify-start w-full min-h-[24rem] p-8 rounded-b-2xl bg-neutral-100 dark:bg-slate-900">
         <Line input="me.learnAboutMe()" output="Press enter to execute" />
         {run &&
           data.slice(0, currentIndex).map((statement, index) => {

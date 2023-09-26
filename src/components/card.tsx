@@ -25,14 +25,14 @@ const Card = ({ title, excerpt, tags, image, repo, demo }: CardProps) => {
           <div className="flex flex-row justify-between">
             <h3 className="capitalize text-2xl font-bold mb-2">{title}</h3>
             <div>
-              <Link href={repo} target="_blank" className="hover:text-accent">
+              <Link href={repo} target="_blank" className="hover:text-primary">
                 <GithubIcon />
               </Link>
               <Link
                 href={demo}
                 target="_blank"
                 aria-description="open live demo"
-                className="hover:text-accent"
+                className="hover:text-primary"
               >
                 <ExternalLinkIcon />
               </Link>
@@ -44,7 +44,7 @@ const Card = ({ title, excerpt, tags, image, repo, demo }: CardProps) => {
               return (
                 <span
                   key={`tag-${index}`}
-                  className="mr-1 text-xs inline-flex items-center font-semibold capitalize py-1 px-2 rounded-md bg-primary/50"
+                  className="mr-1 text-xs inline-flex items-center font-semibold capitalize py-1 px-2 rounded-md bg-secondary"
                 >
                   {tag}
                 </span>

@@ -25,7 +25,7 @@ function ThemeToggle() {
       onClick={switchTheme}
       className="h-8 w-8 flex rounded-md cursor-pointer bg-accent hover:bg-accent/70"
     >
-      <span className="m-auto">
+      <span className="m-auto text-white dark:text-black">
         {activeTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
       </span>
     </button>

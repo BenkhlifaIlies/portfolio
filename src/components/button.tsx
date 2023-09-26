@@ -8,7 +8,7 @@ interface Props {
 }
 const Button = ({ label, link, icon }: Props) => {
   return (
-    <div className="my-6 flex justify-center ">
+    <div className="my-6 text-white flex justify-center ">
       <Link
         href={link}
         className="capitalize font-semibold py-2 px-4 rounded-lg bg-primary cursor-pointer hover:bg-primary/70 flex items-center"

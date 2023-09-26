@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="mb-12">
-        <div className="flex flex-row justify-start items-center p-4 rounded-xl bg-transparent/5">
+        <div className="flex flex-row justify-start items-center p-4 rounded-xl bg-transparent/5 dark:bg-slate-800/50">
           <Image
             src="/ilies-profile-pic.png"
             width={32}

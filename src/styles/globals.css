@@ -4,20 +4,37 @@
 
 @layer base {
   :root[class~='dark'] {
-    --text: 48deg 33% 97%;
-    --background: 173deg 80% 2%;
-    --primary: 43deg 100% 50%;
-    --secondary: 217deg 30% 19%;
-    --accent: 43deg 100% 50%;
+    --text: 60deg 12% 97%;
+    --background: 220deg 46% 8%;
+    --primary: 227deg 20% 40%;
+    --secondary: 227deg 38% 53%;
+    --accent: 220.7deg 46.2% 51.2%;
   }
 
   :root[class~='light'] {
-    --primary: 43deg 100% 50%;
-    --text: 45deg 40% 2%;
-    --background: 0deg 0% 98.8%;
-    --primary: 43deg 100% 50%;
-    --secondary: 260deg 16% 96%;
-    --accent: 223deg 36% 50%;
+    --text: 52deg 37% 8%;
+    --background: 48deg 33% 97%;
+    --primary: 198deg 50% 43%;
+    --secondary: 262deg 36% 81%;
+    --accent: 193.5deg 51% 39.2%;
+  }
+
+  ::-webkit-scrollbar {
+    width: auto;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f7f7f7;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border: 0.25em solid #f7f7f7;
+    border-radius: 100vw;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a9a9a9;
   }
 
   #__next {
@@ -28,10 +45,10 @@
   }
 
   .light #logo {
-    fill: #526cad;
+    fill: #318097;
   }
 
   .dark #logo {
-    fill: #ffb700;
+    fill: #496ebc;
   }
 }

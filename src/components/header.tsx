@@ -24,9 +24,9 @@ function Header() {
           className="flex flex-row justify-center items-center gap-2"
         >
           <Logo />
-          <h1 className="font-bold hover:text-accent bg-gradient-to-r bg-clip-text text-transparent from-pink-400 to-purple-500 dark:from-yellow-400 dark:to-orange-500">
+          {/* <h1 className="font-bold hover:text-accent bg-gradient-to-r bg-clip-text text-transparent from-pink-400 to-purple-500 dark:from-yellow-400 dark:to-orange-500">
             Benkhelifa Ilyes
-          </h1>
+          </h1> */}
         </Link>
         <div className="flex items-center">
           <nav className="hidden md:flex items-center font-bold justify-end uppercase">
