@@ -1,19 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import Spinner from '@/components/spinner'
 
-const LazyModel = dynamic(() => import('../model'), {
-  ssr: false,
-  loading: () => <Spinner />,
-})
 interface Props {
   children: React.ReactNode
+  title: string
 }
 
-const MainLayout = ({ children }: Props) => {
+const MainLayout = ({ title, children }: Props) => {
   return (
     <>
       <Head>
@@ -30,16 +25,11 @@ const MainLayout = ({ children }: Props) => {
         <meta property="og:site_name" content="BenkhelifaIlyes's Homepage" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
-        <title>BenkhelifaIlyes - Homepage</title>
+        <title>{`BenkhelifaIlyes - ${title}`}</title>
       </Head>
       <Header />
       <main className="pt-16 grow bg-background text-text">
-        <div className="max-w-3xl mx-auto px-8">
-          <div className="flex flex-row justify-center items-center mx-auto w-[280px] h-[280px]">
-            <LazyModel />
-          </div>
-          {children}
-        </div>
+        <div className="max-w-3xl mx-auto px-8">{children}</div>
       </main>
       <Footer />
     </>

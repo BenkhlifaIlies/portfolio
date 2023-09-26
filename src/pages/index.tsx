@@ -1,18 +1,30 @@
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+import { ProjectsData } from '@/constants/data'
+
 import Layout from '../components/layouts/mainLayout'
 import ProjectList from '@/components/projectList'
 import Terminal from '@/components/teminal'
 import SocialLinks from '@/components/socialLinks'
-import { ContactIcon, ThreeDotsIcon } from '@/components/icons'
-
-import { ProjectsData } from '@/constants/data'
+import Spinner from '@/components/spinner'
 import Button from '@/components/button'
+import { ContactIcon, ThreeDotsIcon } from '@/components/icons'
 
 const PROJECTSTOSHOW = 4
 
+const LazyModel = dynamic(() => import('../components/model'), {
+  ssr: false,
+  loading: () => <Spinner />,
+})
+
 export default function Home() {
   return (
-    <Layout>
+    <Layout title="Homepage">
+      <div className="flex flex-row justify-center items-center mx-auto w-[280px] h-[280px]">
+        <LazyModel />
+      </div>
+
       <div className="mb-12">
         <div className="flex flex-row justify-start items-center p-4 rounded-xl bg-transparent/5 dark:bg-slate-800/50">
           <Image
