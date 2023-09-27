@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import { useRouter } from 'next/router'
 import BurgerMenu from './burgerMenu'
 import { Logo, MainGithubIcon } from './icons'
 
@@ -16,6 +17,8 @@ const ThemeToggle = dynamic(() => import('./themeToggle'), {
 })
 
 const Header = () => {
+  const router = useRouter()
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg ">
       <div className="w-auto py-2 px-4 h-16 flex flex-row justify-between items-center max-w-3xl mx-auto">
@@ -24,18 +27,22 @@ const Header = () => {
           className="flex flex-row justify-center items-center gap-2"
         >
           <Logo />
-          {/* <h1 className="font-bold hover:text-accent bg-gradient-to-r bg-clip-text text-transparent from-pink-400 to-purple-500 dark:from-yellow-400 dark:to-orange-500">
-            Benkhelifa Ilyes
-          </h1> */}
         </Link>
         <div className="flex items-center">
           <nav className="hidden md:flex items-center font-bold justify-end uppercase">
-            <Link className="px-4 text-text hover:text-accent" href="/about/">
+            <Link
+              href="/about/"
+              className={`px-4 text-text hover:text-accent ${
+                /about/.test(router.asPath) ? 'text-accent' : ''
+              }`}
+            >
               About
             </Link>
             <Link
-              className="px-4 text-text hover:text-accent"
               href="/projects/"
+              className={`px-4 text-text hover:text-accent ${
+                /projects/.test(router.asPath) ? 'text-accent' : ''
+              }`}
             >
               Projects
             </Link>
