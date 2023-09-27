@@ -32,16 +32,16 @@ const Header = () => {
           <nav className="hidden md:flex items-center font-bold justify-end uppercase">
             <Link
               href="/about/"
-              className={`px-4 text-text hover:text-accent ${
-                /about/.test(router.asPath) ? 'text-accent' : ''
+              className={`px-4 hover:text-accent ${
+                /about/.test(router.asPath) ? 'text-accent' : 'text-text'
               }`}
             >
               About
             </Link>
             <Link
               href="/projects/"
-              className={`px-4 text-text hover:text-accent ${
-                /projects/.test(router.asPath) ? 'text-accent' : ''
+              className={`px-4 hover:text-accent ${
+                /projects/.test(router.asPath) ? 'text-accent' : 'text-text '
               }`}
             >
               Projects
