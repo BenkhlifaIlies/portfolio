@@ -15,7 +15,7 @@ const ThemeToggle = dynamic(() => import('./themeToggle'), {
   ),
 })
 
-function Header() {
+const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg ">
       <div className="w-auto py-2 px-4 h-16 flex flex-row justify-between items-center max-w-3xl mx-auto">

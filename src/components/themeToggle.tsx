@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SunIcon, MoonIcon } from './icons'
 
-function ThemeToggle() {
+const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState<string>(
     window.localStorage.getItem('theme') || 'dark',
   )

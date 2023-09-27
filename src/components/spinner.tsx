@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Spinner() {
+const Spinner = () => {
   return (
     <div
       className="w-12 h-12 rounded-full animate-spin

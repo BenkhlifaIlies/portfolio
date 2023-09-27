@@ -3,7 +3,7 @@ interface Props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const BurgerButton: React.FC<Props> = ({ open, setOpen }: Props) => {
+const BurgerButton = ({ open, setOpen }: Props) => {
   return (
     <button
       onClick={() => setOpen(!open)}
