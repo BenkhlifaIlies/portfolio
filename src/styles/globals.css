@@ -5,7 +5,7 @@
 @layer base {
   :root[class~='dark'] {
     --text: 60deg 12% 97%;
-    --background: 220deg 46% 8%;
+    --background: 248deg 71% 4%;
     --primary: 227deg 20% 40%;
     --secondary: 227deg 38% 53%;
     --accent: 220.7deg 46.2% 51.2%;

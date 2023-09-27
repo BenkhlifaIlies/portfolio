@@ -69,7 +69,7 @@ export default function Home() {
         <p className="capitalize text-justify indent-4 leading-7">
           Here are a few of my favorite projects:
         </p>
-        <div className="mt-6">
+        <div className="w-full lg:grid grid-cols-2 auto-rows-[600px] gap-x-8 my-12">
           <ProjectList list={ProjectsData.slice(0, PROJECTSTOSHOW)} />
         </div>
         <Button label="see more" link="/projects" icon={<ThreeDotsIcon />} />
