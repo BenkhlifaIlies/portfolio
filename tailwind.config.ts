@@ -16,6 +16,9 @@ const config: Config = {
         secondary: 'hsl(var(--secondary) /<alpha-value>)',
         accent: 'hsl(var(--accent) /<alpha-value>)',
       },
+      fontFamily: {
+        sans: ['Inter'],
+      },
     },
   },
   plugins: [],
