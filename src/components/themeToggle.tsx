@@ -3,7 +3,7 @@ import { SunIcon, MoonIcon } from './icons'
 
 const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState<string>(
-    window.localStorage.getItem('theme') || 'dark',
+    window.localStorage.getItem('theme') || 'light',
   )
 
   const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light'
