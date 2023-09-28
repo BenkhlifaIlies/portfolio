@@ -3,13 +3,13 @@ import { CardProps } from '@/constants/types'
 import Link from 'next/link'
 import { ExternalLinkIcon, GithubIcon } from './icons'
 
-const Card = ({ title, excerpt, tags, image, repo, demo }: CardProps) => {
+const Card = ({ title, excerpt, tags, thumbnail, repo, demo }: CardProps) => {
   return (
     <div className="mb-12 flex flex-col gap-2 rounded-xl shadow-md lg:shadow-lg bg-neutral-100 dark:bg-slate-900 hover:scale-[1.02] ">
       <Link href={`/projects/${title}`}>
         <div className="!relative max-h-64 lg:h-96 w-full overflow-hidden rounded-t-xl">
           <Image
-            src={`/projects/${image}`}
+            src={`/projects/${thumbnail}`}
             alt={`${title} snapshot`}
             fill
             loading="lazy"
