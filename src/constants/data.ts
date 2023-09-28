@@ -35,7 +35,7 @@ export const ProjectsData: Project[] = [
     I genuinely hope you enjoy experimenting with this visualization tool as much as I did building it.`,
     stack: ['react', 'typescript', 'styled-components'],
     tags: ['react', 'algorithms', 'PWA', 'tool'],
-    screeshots: [],
+    screenshots: null,
   },
   {
     title: 'pathviz',
@@ -49,6 +49,6 @@ export const ProjectsData: Project[] = [
     I genuinely hope you enjoy experimenting with this visualization tool as much as I did building it.`,
     stack: ['react', 'typescript', 'styled-components'],
     tags: ['react', 'algorithms', 'tool', 'PWA'],
-    screeshots: [],
+    screenshots: null,
   },
 ]
