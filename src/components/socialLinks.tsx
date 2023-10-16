@@ -10,7 +10,7 @@ const SocialLinks = () => {
       </h3>
       <ul className="pl-4 font-semibold">
         <li className="my-2 hover:text-accent w-fit">
-          <Link href="#" target="_blank">
+          <Link href="https://blog.iliesbenkhelifa.com/" target="_blank">
             <span className="capitalize pr-2">my blog</span>
             <BlogLogo />
           </Link>
