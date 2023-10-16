@@ -3,7 +3,7 @@ import { Project } from './types'
 export const terminalData: { input: string; output: string }[] = [
   {
     input: 'me.getCurrentLocation()',
-    output: 'Dubai, UAE',
+    output: 'Oran, Algeria',
   },
 
   {
@@ -17,7 +17,7 @@ export const terminalData: { input: string; output: string }[] = [
   {
     input: 'me.getSkills()',
     output:
-      '[ "JavaScript", "Typescript", "React", "NextJS", "React Native", "Tailwind", "SASS", "Git" ... ]',
+      '[ "JavaScript", "Typescript", "React", "React Native", "NextJS", "Tailwind", "Git", "Rest", "GraphQL", "TRPC", "NdeJS", "SQL", "NoSQL" ]',
   },
 ]
 
@@ -35,7 +35,7 @@ export const ProjectsData: Project[] = [
     I genuinely hope you enjoy experimenting with this visualization tool as much as I did building it.`,
     stack: ['react', 'typescript', 'styled-components'],
     tags: ['react', 'algorithms', 'PWA', 'tool'],
-    screenshots: null,
+    screenshots: ['sortviz-01.png', 'sortviz-02.png', 'sortviz-03.png'],
   },
   {
     title: 'pathviz',
@@ -49,6 +49,6 @@ export const ProjectsData: Project[] = [
     I genuinely hope you enjoy experimenting with this visualization tool as much as I did building it.`,
     stack: ['react', 'typescript', 'styled-components'],
     tags: ['react', 'algorithms', 'tool', 'PWA'],
-    screenshots: null,
+    screenshots: ['pathviz-01.png', 'pathviz-02.png', 'pathviz-03.png'],
   },
 ]
