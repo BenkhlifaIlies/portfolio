@@ -1,0 +1,7 @@
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@react-three/drei@10.7.9'
+  - '@react-three/fiber@9.8.1'
+  - its-fine@2.1.1

@@ -17,13 +17,14 @@ export const terminalData: { input: string; output: string }[] = [
   {
     input: 'me.getSkills()',
     output:
-      '[ "JavaScript", "Typescript", "React", "React Native", "NextJS", "Tailwind", "Git", "Rest", "GraphQL", "TRPC", "NdeJS", "SQL", "NoSQL" ]',
+      '[ "JavaScript", "Typescript", "React", "React Native", "NextJS", "Tailwind", "Git", "Rest", "GraphQL", "TRPC", "NodeJS", "SQL", "NoSQL" ]',
   },
 ]
 
 export const ProjectsData: Project[] = [
   {
     title: 'sortviz',
+    name: 'SortViz',
     thumbnail: 'sortviz-snapshot.png',
     excerpt:
       'SortViz is a minimal visualization tool that helps you visualize how different sorting algorithms work in real-time in an elegant modern design.',
@@ -39,6 +40,7 @@ export const ProjectsData: Project[] = [
   },
   {
     title: 'pathviz',
+    name: 'PathViz',
     thumbnail: 'pathviz-snapshot.png',
     excerpt:
       'PathViz is a visualization tool that allows you to see how various path finding algorithms function in real-time. It has a sleek, modern design and is simple to use',
