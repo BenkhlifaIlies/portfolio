@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 
 import BurgerButton from './burgerButton'
@@ -8,11 +10,12 @@ const BurgerMenu = () => {
 
   return (
     <>
-      <BurgerButton open={open} setOpen={setOpen} aria-controls="menu" />
+      <BurgerButton open={open} setOpen={setOpen} />
       <div
-        className="fixed w-screen h-screen top-0 right-0 z-40 bg-opacity-100 opacity-25 bg-gray-400 dark:opacity-60 dark:bg-slate-900 transition-opacity duration-300"
+        className="fixed w-screen h-screen top-0 right-0 z-40 opacity-25 bg-gray-400 dark:opacity-60 dark:bg-slate-900 transition-opacity duration-300"
         style={!open ? { display: 'none' } : {}}
         onClick={() => setOpen(false)}
+        aria-hidden="true"
       ></div>
       <MobileMenu {...{ open }} />
     </>

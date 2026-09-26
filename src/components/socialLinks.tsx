@@ -10,13 +10,21 @@ const SocialLinks = () => {
       </h3>
       <ul className="pl-4 font-semibold">
         <li className="my-2 hover:text-accent w-fit">
-          <Link href="https://blog.iliesbenkhelifa.com/" target="_blank">
+          <Link
+            href="https://blog.iliesbenkhelifa.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="capitalize pr-2">my blog</span>
             <BlogLogo />
           </Link>
         </li>
         <li className="my-2 hover:text-accent w-fit">
-          <Link href="https://github.com/BenkhlifaIlies" target="_blank">
+          <Link
+            href="https://github.com/BenkhlifaIlies"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="capitalize pr-2">GitHub</span>
             <GithubIcon />
           </Link>
@@ -25,13 +33,18 @@ const SocialLinks = () => {
           <Link
             href="https://www.linkedin.com/in/ilyesbenkhelifa/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="capitalize pr-2">LinkedIn</span>
             <LinkedInIcon />
           </Link>
         </li>
         <li className="my-2 hover:text-accent w-fit">
-          <Link href="https://twitter.com/IlyesBenkhlifa" target="_blank">
+          <Link
+            href="https://twitter.com/IlyesBenkhlifa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="capitalize pr-2">twitter</span>
             <TwitterIcon />
           </Link>

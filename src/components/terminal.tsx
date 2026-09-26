@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useCallback, useEffect, useState } from 'react'
 import { terminalData as data } from '@/constants/data'
 import { ArrowIcon } from './icons'
@@ -5,7 +7,7 @@ import { ArrowIcon } from './icons'
 const Line = ({ input, output }: { input: string; output: string }) => {
   const [currentInputText, setCurrentInputText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [outputVizibility, setoutputVizibility] = useState<boolean>(false)
+  const [outputVisibility, setOutputVisibility] = useState<boolean>(false)
   const DELAY = 100
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const Line = ({ input, output }: { input: string; output: string }) => {
 
     if (currentIndex === input.length) {
       const outputTimeout = setTimeout(() => {
-        setoutputVizibility(true)
+        setOutputVisibility(true)
       }, DELAY * 2)
 
       return () => {
@@ -35,7 +37,7 @@ const Line = ({ input, output }: { input: string; output: string }) => {
         <ArrowIcon />
         <span className="font-semibold text-lg">{currentInputText}</span>
       </div>
-      {outputVizibility ? (
+      {outputVisibility ? (
         <span className="ml-6 text-lg text-text/80 ">{output}</span>
       ) : null}
     </>

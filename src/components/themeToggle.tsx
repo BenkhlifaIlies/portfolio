@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 import { SunIcon, MoonIcon } from './icons'
 
@@ -22,10 +24,13 @@ const ThemeToggle = () => {
 
   return (
     <button
+      type="button"
       onClick={switchTheme}
+      aria-label={`Switch to ${inactiveTheme} mode`}
+      title={`Switch to ${inactiveTheme} mode`}
       className="h-8 w-8 flex rounded-md cursor-pointer bg-accent hover:bg-accent/70"
     >
-      <span className="m-auto text-white dark:text-black">
+      <span className="m-auto text-white dark:text-black" aria-hidden="true">
         {activeTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
       </span>
     </button>

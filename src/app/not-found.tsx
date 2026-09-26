@@ -1,10 +1,14 @@
-import React from 'react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import Layout from '@/components/layouts/mainLayout'
+
+export const metadata: Metadata = {
+  title: 'Page Not Found',
+  robots: { index: false, follow: true },
+}
 
 export default function Custom404() {
   return (
-    <Layout title="Page Not Found">
+    <>
       <div className="w-full mt-32 m-auto text-center">
         <h1 className="font-bold text-7xl capitalize">error 404</h1>
         <p className="my-6 text-xl font-semibold capitalize">
@@ -19,6 +23,6 @@ export default function Custom404() {
           </Link>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }

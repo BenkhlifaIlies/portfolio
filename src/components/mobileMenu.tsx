@@ -10,6 +10,8 @@ const MobileMenu: React.FC<Props> = ({ open }: Props) => {
   return (
     <>
       <div
+        id="mobile-menu"
+        inert={!open}
         className="z-50 fixed h-screen top-0 left-0 w-4/5 backdrop-blur-md bg-background dark:bg-very_dark_blue"
         style={
           open
@@ -23,20 +25,24 @@ const MobileMenu: React.FC<Props> = ({ open }: Props) => {
               }
         }
       >
-        <nav className="w-full h-full flex flex-col justify-center items-center font-bold text-text text-4xl">
-          <Link className="capitalize mb-6 hover:text-accent" href="/about/">
+        <nav
+          aria-label="Mobile"
+          className="w-full h-full flex flex-col justify-center items-center font-bold text-text text-4xl"
+        >
+          <Link className="capitalize mb-6 hover:text-accent" href="/about">
             about
           </Link>
-          <Link className="capitalize mb-6 hover:text-accent" href="/projects/">
+          <Link className="capitalize mb-6 hover:text-accent" href="/projects">
             projects
           </Link>
           <Link
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/BenkhlifaIlies/portfolio"
             className="capitalize mb-6 hover:text-accent"
           >
             view source
-            <span className="inline ml-2">
+            <span className="inline ml-2" aria-hidden="true">
               <ExternalLinkIcon />
             </span>
           </Link>
