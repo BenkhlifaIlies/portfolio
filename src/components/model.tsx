@@ -1,22 +1,12 @@
-import { useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { useGLTF, CameraControls } from '@react-three/drei'
-import {
-  Mesh,
-  BufferGeometry,
-  NormalBufferAttributes,
-  Material,
-  Object3DEventMap,
-} from 'three'
+'use client'
 
-const Model = (props: JSX.IntrinsicElements['mesh']) => {
-  const ref = useRef<
-    Mesh<
-      BufferGeometry<NormalBufferAttributes>,
-      Material | Material[],
-      Object3DEventMap
-    >
-  >(null!)
+import { useRef } from 'react'
+import { Canvas, useFrame, type ThreeElements } from '@react-three/fiber'
+import { useGLTF, CameraControls } from '@react-three/drei'
+import type { Mesh } from 'three'
+
+const Model = (props: ThreeElements['mesh']) => {
+  const ref = useRef<Mesh>(null!)
   const model = useGLTF('/me.glb')
   useFrame(() => (ref.current.rotation.y += 0.005))
   return (

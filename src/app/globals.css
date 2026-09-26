@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-text: hsl(var(--text));
+  --color-background: hsl(var(--background));
+  --color-primary: hsl(var(--primary));
+  --color-secondary: hsl(var(--secondary));
+  --color-accent: hsl(var(--accent));
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
 
 @layer base {
   :root[class~='dark'] {
@@ -8,15 +17,15 @@
     --background: 248deg 71% 4%;
     --primary: 227deg 20% 40%;
     --secondary: 227deg 38% 53%;
-    --accent: 220.7deg 46.2% 51.2%;
+    --accent: 220.7deg 46.2% 60%;
   }
 
   :root[class~='light'] {
     --text: 52deg 37% 8%;
     --background: 48deg 33% 97%;
-    --primary: 198deg 50% 43%;
+    --primary: 198deg 50% 38%;
     --secondary: 262deg 36% 81%;
-    --accent: 193.5deg 51% 39.2%;
+    --accent: 193.5deg 51% 36%;
   }
 
   ::-webkit-scrollbar {
@@ -37,8 +46,7 @@
     background: #a9a9a9;
   }
 
-  #__next {
-    color: var(--text);
+  body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;

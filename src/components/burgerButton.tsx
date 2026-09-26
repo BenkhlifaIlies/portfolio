@@ -6,7 +6,11 @@ interface Props {
 const BurgerButton = ({ open, setOpen }: Props) => {
   return (
     <button
+      type="button"
       onClick={() => setOpen(!open)}
+      aria-label={open ? 'Close menu' : 'Open menu'}
+      aria-expanded={open}
+      aria-controls="mobile-menu"
       className="md:hidden ml-4 flex flex-col justify-around w-6 h-6 bg-transparent cursor-pointer p-0 z-10 border-none top-8 right-8"
     >
       <span

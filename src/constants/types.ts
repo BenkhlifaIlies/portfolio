@@ -8,6 +8,7 @@ export interface CardProps {
 }
 
 export interface Project extends CardProps {
+  name: string
   description: string
   screenshots?: string[] | null
   stack: string[]
